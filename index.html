@@ -13,13 +13,13 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">my.LIPRARY</a>
+					<a class="navbar-brand" href="index.html">my.LIPRARY</a>
 				</div>
 				<ul class="nav navbar-nav smooth-scroll">
-					<li class="nav-item"><a class="nav-link" href="#">CDs</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">DVDs</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">BOOKS</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">COMICS</a></li>
+					<li class="nav-item"><a class="nav-link" href="#cds">CDs</a></li>
+					<li class="nav-item"><a class="nav-link" href="#dvds">DVDs</a></li>
+					<li class="nav-item"><a class="nav-link" href="#books">BOOKS</a></li>
+					<li class="nav-item"><a class="nav-link" href="#comics">COMICS</a></li>
 				</ul>
 				<form class="navbar-form navbar-right">
                  <div class="form-group">
@@ -33,7 +33,7 @@
 <!-------------------------------- CDs--------------------------------------------->	
 	<div class="container-fluid">
       <dl>
-       <br><dt><h1>CDs</h1></dt><hr>
+       <br><br><dt id="cds"><h1>CDs</h1></dt><hr>
 		<div class="row textContent">
 			<div class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
 				<img src="img/Bob_Dylan_-_Dylan_(1973_album).jpg" width="80%">
@@ -88,7 +88,7 @@
      </dl>
 	</div>
 <!-------------------------------- DVDs--------------------------------------------->
-	<br><dt><h1>DVDs</h1></dt><hr>
+	<br><dt id="dvds"><h1>DVDs</h1></dt><hr>
 	<div class="container-fluid">
 		<div class="row textContent">
 			<div class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -170,7 +170,7 @@
 	
 	</div>
 	<!-------------------------------- BOOKs--------------------------------------------->
-	<br><dt><h1>BOOKS</h1></dt><hr>
+	<br><dt id="books"><h1>BOOKS</h1></dt><hr>
 	<div class="container-fluid">
 		<div class="row textContent">
 		
@@ -228,7 +228,7 @@
 	
 	</div>
 	<!-------------------------------- COMICS--------------------------------------------->
-	<br><dt><h1>COMICS</h1></dt><hr>
+	<br><dt id="comics"><h1>COMICS</h1></dt><hr>
 	<div class="container-fluid">
 		<div class="row textConten">
 			<div class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -336,18 +336,6 @@
         document.getElementById("foundation").innerHTML = "Title: " + comic2.Title +"<br>Author: " + comic2.Author + "<br> Genre: " + comic2.Genre  +  "<br>weight: " + comic1.Weight + "kg" + "<br>Publisher: " + comic2.Publisher ;
 
 
-        $(document).ready(function(){
-
-            for (let i = 0; i < 4; i++) {
-                $(".nav-link:eq(" + i + ")").click(function() {
-                    $("html, body").animate({
-                        scrollTop: $(".textContent:eq(" + i + ")").offset().top
-                    }, 800);
-                });
-            }
-        })
-
-
  	</script>
     
      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -359,8 +347,6 @@
 
   <link href="https://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
 
-
-  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </body>
